@@ -707,6 +707,8 @@ GameObject:
   - component: {fileID: 2000042905}
   - component: {fileID: 2000042908}
   - component: {fileID: 2000042907}
+  - component: {fileID: 2000042909}
+  - component: {fileID: 2000042910}
   m_Layer: 0
   m_Name: Personnage2
   m_TagString: Untagged
@@ -848,6 +850,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2000042909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000042904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594af165ffa0ad140b1ec6e473f2eefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_jumpForce: 7
+  grounded: 0
+--- !u!114 &2000042910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000042904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dd4d66a1f2ad444ae5d3074f430ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
