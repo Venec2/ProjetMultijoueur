@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 2078238527}
   - component: {fileID: 2078238529}
   - component: {fileID: 2078238528}
+  - component: {fileID: 2078238530}
   m_Layer: 0
   m_Name: Epee_0
   m_TagString: Untagged
@@ -1577,6 +1578,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2078238530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078238526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a40270551f38314399c22df64ba1130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2115061945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a55243b6f156e44a984f05f71e30ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EdgeCollider2D: {fileID: 0}
 --- !u!68 &2115061948
 EdgeCollider2D:
   m_ObjectHideFlags: 0

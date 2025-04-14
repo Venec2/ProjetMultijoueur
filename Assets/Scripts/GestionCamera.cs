@@ -32,7 +32,7 @@ public class GestionCamera : MonoBehaviour
     cam.orthographicSize = size;
 
 
-    Debug.Log(m_perso1.position.x - m_perso2.position.x);
+    //Debug.Log(m_perso1.position.x - m_perso2.position.x);
     
     }
 }

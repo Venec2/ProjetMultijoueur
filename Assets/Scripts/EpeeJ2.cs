@@ -24,6 +24,7 @@ public class EpeeJ2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("test");
         if(collision.GetComponent<Move>() != null)
         {
             collision.GetComponent<Animator>().SetTrigger("Mort");
