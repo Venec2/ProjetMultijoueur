@@ -26,24 +26,42 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        // Jump
+        
         if(NumeroJoueur == 1){
+            /// Jump
             if (Input.GetKeyDown("space") && grounded)
             {
                 m_rigidBody2D.AddForce(Vector3.up * m_jumpForce, ForceMode2D.Impulse);
             }
-        }
+            // mAnimator.SetTrigger("TrJump");
+            
 
-
-        // Move
-        if(NumeroJoueur == 1){
+            /// move
             if (Input.GetKey(KeyCode.A)){
                 gameObject.transform.position = transform.position + Vector3.left * m_speed * Time.deltaTime;
             }
             if (Input.GetKey(KeyCode.D)){
                 gameObject.transform.position = transform.position + -Vector3.left * m_speed * Time.deltaTime;
             }
+
+
+
+        }else if(NumeroJoueur == 2){
+            /// Jump
+            if (Input.GetKeyDown(KeyCode.RightControl) && grounded){
+            m_rigidBody2D.AddForce(Vector3.up * m_jumpForce, ForceMode2D.Impulse);
+            // mAnimator.SetTrigger("TrJump");
+            }
+
+            /// move
+            if (Input.GetKey(KeyCode.LeftArrow)){
+                gameObject.transform.position = transform.position + Vector3.left * m_speed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.RightArrow)){
+              gameObject.transform.position = transform.position + -Vector3.left * m_speed * Time.deltaTime;
+            }
         }
+
     }
 
 
