@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 1695400905}
   m_Layer: 0
   m_Name: Perso_red
-  m_TagString: Untagged
+  m_TagString: Joueur1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumeroJoueur: 1
-  m_jumpForce: 25
+  m_jumpForce: 10
   m_speed: 5
   grounded: 0
 --- !u!1 &1905715504
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 2000042914}
   m_Layer: 0
   m_Name: Perso_green
-  m_TagString: Untagged
+  m_TagString: Joueur2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1563,9 +1563,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2078238526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a40270551f38314399c22df64ba1130, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a55243b6f156e44a984f05f71e30ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumeroJoueur: 2
 --- !u!1 &2115061945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a55243b6f156e44a984f05f71e30ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumeroJoueur: 1
 --- !u!68 &2115061948
 EdgeCollider2D:
   m_ObjectHideFlags: 0
