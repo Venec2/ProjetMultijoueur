@@ -123,8 +123,14 @@ public class Player : MonoBehaviour
         }
 
         if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Death")){
-                Destroy (gameObject.transform.GetChild(0).gameObject);
-                Destroy (gameObject);
+                //Destroy (gameObject.transform.GetChild(0).gameObject);
+                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.transform.GetChild(0).gameObject.GetComponent<EdgeCollider2D>().enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<EdgeCollider2D>().enabled = false;
+                //Destroy (gameObject);
+
+                StartCoroutine(Respawn(2f));
         }
 
 
@@ -158,6 +164,22 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(delay);
         gameObject.transform.GetChild(0).gameObject.transform.localPosition = debut;
         gameObject.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        
+    }
+
+    IEnumerator Respawn(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+
+        
+
+        
+        gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.transform.GetChild(0).gameObject.GetComponent<EdgeCollider2D>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<EdgeCollider2D>().enabled = true;
+        gameObject.transform.localPosition = new Vector2(10f, 5f);
         
     }
     
