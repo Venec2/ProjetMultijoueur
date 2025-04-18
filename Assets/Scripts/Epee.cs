@@ -29,7 +29,6 @@ public class Epee : MonoBehaviour
         if(NumeroJoueur == 1){
             if(collision.CompareTag("Joueur2")==true){
                 collision.GetComponent<Animator>().SetTrigger("Mort");
-                StartCoroutine(SelfDestruct(collision.gameObject));
             }
             
         }
@@ -37,18 +36,10 @@ public class Epee : MonoBehaviour
         if(NumeroJoueur == 2){
             if(collision.CompareTag("Joueur1")==true){
                 collision.GetComponent<Animator>().SetTrigger("Mort");
-                StartCoroutine(SelfDestruct(collision.gameObject));
             }
         }
     }
 
-
-
-    IEnumerator SelfDestruct(GameObject joueuratuer)
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(joueuratuer);
-    }
 
 
 

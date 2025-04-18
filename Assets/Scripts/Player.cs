@@ -16,10 +16,13 @@ public class Player : MonoBehaviour
     public bool grounded;
     Rigidbody2D m_rigidBody2D;
 
+    Animator m_animator;
+
 
     void Start()
     {
         m_rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
+        m_animator = gameObject.GetComponent<Animator>();
     }
  
 
@@ -45,6 +48,11 @@ public class Player : MonoBehaviour
             }
 
 
+            ///attaque
+            if (Input.GetKey(KeyCode.E)){
+                m_animator.SetTrigger("Attaque");
+            }
+
 
         }else if(NumeroJoueur == 2){
             /// Jump
@@ -60,7 +68,18 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow)){
               gameObject.transform.position = transform.position + -Vector3.left * m_speed * Time.deltaTime;
             }
+
+            ///attaque
+            if (Input.GetKey(KeyCode.RightShift)){
+                m_animator.SetTrigger("Attaque");
+            }
         }
+
+        if(m_animator.GetCurrentAnimatorStateInfo(0).IsName("Death")){
+                Destroy (gameObject.transform.GetChild(0).gameObject);
+                Destroy (gameObject);
+        }
+
 
     }
 
@@ -82,4 +101,17 @@ public class Player : MonoBehaviour
             grounded = false;
         }
     }
+
+
+    /*IEnumerator SelfDestruct(GameObject joueuratuer, int NumeroJoueur)
+    {
+        if(NumeroJoueur==1){
+            Destroy(Epee)
+        }
+        yield return new WaitForSeconds(1f);
+        Destroy(joueuratuer);
+    }
+    */
+
+
 }

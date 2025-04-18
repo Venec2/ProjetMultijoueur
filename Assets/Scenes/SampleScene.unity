@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 2078238528}
   - component: {fileID: 2078238530}
   m_Layer: 0
-  m_Name: Epee_0
+  m_Name: Epee_green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 2115061948}
   - component: {fileID: 2115061947}
   m_Layer: 0
-  m_Name: Epee_0
+  m_Name: Epee_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
