@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    public int vies = 3 ;
+    [SerializeField]
 
     int NumeroJoueur ;
 
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
     {
 
         
+
+        
         if(NumeroJoueur == 1){
             /// Jump
             if (Input.GetKeyDown("space") && grounded)
@@ -49,8 +53,12 @@ public class Player : MonoBehaviour
 
 
             ///attaque
-            if (Input.GetKey(KeyCode.E)){
+            if (Input.GetKeyDown(KeyCode.E)){
+                m_animator.ResetTrigger("NotAttaque");
                 m_animator.SetTrigger("Attaque");
+            }else if(Input.GetKeyUp(KeyCode.E)){
+                m_animator.ResetTrigger("Attaque");
+                m_animator.SetTrigger("NotAttaque");
             }
 
 
@@ -70,8 +78,12 @@ public class Player : MonoBehaviour
             }
 
             ///attaque
-            if (Input.GetKey(KeyCode.RightShift)){
+            if (Input.GetKeyDown(KeyCode.RightShift)){
+                m_animator.ResetTrigger("NotAttaque");
                 m_animator.SetTrigger("Attaque");
+            }else if(Input.GetKeyUp(KeyCode.RightShift)){
+                m_animator.ResetTrigger("Attaque");
+                m_animator.SetTrigger("NotAttaque");
             }
         }
 
@@ -81,7 +93,10 @@ public class Player : MonoBehaviour
         }
 
 
+
     }
+
+    
 
 
     private void OnCollisionEnter2D(Collision2D collision)
